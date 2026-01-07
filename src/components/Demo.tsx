@@ -1,4 +1,4 @@
-import { Play, Download, ExternalLink } from 'lucide-react';
+import { Play } from 'lucide-react';
 
 const Demo = () => {
   return (
@@ -16,7 +16,7 @@ const Demo = () => {
 
         <div className="max-w-4xl mx-auto">
           {/* Video Embed */}
-          <div className="card-base mb-8">
+          <div className="card-base">
             <div className="aspect-video bg-foreground rounded-xl overflow-hidden">
               <video
                 controls
@@ -32,39 +32,14 @@ const Demo = () => {
             </p>
           </div>
 
-          {/* Action Buttons */}
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary gap-2"
-            >
-              <ExternalLink size={20} />
-              Watch on YouTube
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-secondary gap-2"
-            >
-              <Download size={20} />
-              Download APK
-            </a>
-          </div>
-
-          {/* Walkthrough Section */}
-          <div className="mt-12 card-base text-center">
-            <h3 className="font-heading font-semibold text-xl mb-4">App Walkthrough</h3>
-            <p className="text-muted-foreground mb-6">
-              Explore the key features and user flow of the Baddilha application
+          {/* Description */}
+          <div className="mt-8 card-base text-center">
+            <h3 className="font-heading font-semibold text-xl mb-4">About Baddilha</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Baddilha is a sustainable mobile platform designed to help parents swap, donate, and 
+              purchase affordable children's items. The app promotes environmental sustainability 
+              by reducing waste while building a supportive community of parents in Bahrain.
             </p>
-            <div className="aspect-video bg-mint-light/50 rounded-xl flex flex-col items-center justify-center border-2 border-dashed border-mint">
-              <Play className="w-16 h-16 text-mint mb-4" />
-              <p className="text-muted-foreground font-medium">Interactive Walkthrough</p>
-              <p className="text-sm text-muted-foreground mt-2">[Add GIF or video walkthrough]</p>
-            </div>
           </div>
         </div>
       </div>

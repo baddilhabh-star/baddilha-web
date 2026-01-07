@@ -1,17 +1,23 @@
-import { BarChart3, ImageIcon, CheckSquare } from 'lucide-react';
+import { BarChart3, CheckSquare } from 'lucide-react';
+import screenshotHome from '@/assets/screenshot-home.png';
+import screenshotProfile from '@/assets/screenshot-profile.png';
+import screenshotListing from '@/assets/screenshot-listing.png';
 
 const screenshots = [
   {
     title: 'Home Screen',
-    caption: 'Main dashboard showing featured items and category browsing',
-  },
-  {
-    title: 'Item Listing',
-    caption: 'Detailed item view with swap/buy options and seller contact',
+    caption: 'Main application landing page',
+    image: screenshotHome,
   },
   {
     title: 'User Profile',
-    caption: 'Personal profile with listed items and transaction history',
+    caption: 'User account and profile management screen',
+    image: screenshotProfile,
+  },
+  {
+    title: 'Item Listing',
+    caption: 'Listing and browsing children\'s items',
+    image: screenshotListing,
   },
 ];
 
@@ -33,10 +39,14 @@ const Results = () => {
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {screenshots.map((screenshot, index) => (
             <div key={index} className="card-base card-hover">
-              <div className="aspect-[9/16] bg-mint-light/50 rounded-xl flex flex-col items-center justify-center border-2 border-dashed border-mint mb-4">
-                <ImageIcon className="w-12 h-12 text-mint mb-2" />
-                <p className="text-sm text-muted-foreground">{screenshot.title}</p>
+              <div className="aspect-[9/16] bg-background rounded-xl overflow-hidden mb-4">
+                <img
+                  src={screenshot.image}
+                  alt={screenshot.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
+              <h4 className="font-heading font-semibold text-center mb-1">{screenshot.title}</h4>
               <p className="text-sm text-muted-foreground text-center">
                 {screenshot.caption}
               </p>
