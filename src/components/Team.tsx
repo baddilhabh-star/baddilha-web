@@ -5,12 +5,12 @@ const students = [
     name: 'Haya Hassan',
     major: 'Information Systems',
     email: 'h.alhamar179@gmail.com',
-    linkedin: 'https://www.linkedin.com/in/haya-alhamar-715584361',
+    linkedin: 'https://www.linkedin.com/in/haya-yusuf-715584361/',
   },
   {
     name: 'Zain Alkhajah',
     major: 'Information Systems',
-    email: null,
+    email: 'Zainalkhajah2@gmail.com',
     linkedin: 'https://www.linkedin.com/in/zain-alkhajah-487824356',
   },
   {
