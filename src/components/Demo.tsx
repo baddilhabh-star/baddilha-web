@@ -14,10 +14,10 @@ const Demo = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* Video Embed */}
-          <div className="card-base">
-            <div className="aspect-video bg-foreground rounded-xl overflow-hidden">
+          <div className="card-base p-6 md:p-8">
+            <div className="aspect-video bg-foreground rounded-2xl overflow-hidden shadow-xl">
               <video
                 controls
                 className="w-full h-full object-cover"
@@ -27,7 +27,7 @@ const Demo = () => {
                 Your browser does not support the video tag.
               </video>
             </div>
-            <p className="text-sm text-muted-foreground text-center mt-4">
+            <p className="text-base text-muted-foreground text-center mt-6 font-medium">
               Baddilha - Elevator Pitch Video
             </p>
           </div>
