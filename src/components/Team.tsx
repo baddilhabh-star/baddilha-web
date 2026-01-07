@@ -1,33 +1,30 @@
-import { Users, Linkedin, Github, Mail, GraduationCap } from 'lucide-react';
+import { Users, Linkedin, Mail, GraduationCap } from 'lucide-react';
 
 const students = [
   {
-    name: 'Haya Al-Hamar',
-    major: 'Computer Science',
-    email: 'student1@uob.edu.bh',
-    linkedin: '#',
-    github: '#',
+    name: 'Haya Hassan',
+    major: 'Information Systems',
+    email: 'h.alhamar179@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/haya-alhamar-715584361',
   },
   {
-    name: '[Team Member 2]',
-    major: '[Major]',
-    email: '[email]',
-    linkedin: '#',
-    github: '#',
+    name: 'Zain Alkhajah',
+    major: 'Information Systems',
+    email: null,
+    linkedin: 'https://www.linkedin.com/in/zain-alkhajah-487824356',
   },
   {
-    name: '[Team Member 3]',
-    major: '[Major]',
-    email: '[email]',
-    linkedin: '#',
-    github: '#',
+    name: 'Alghalia Nader',
+    major: 'Information Systems',
+    email: 'Alghalia1551@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/alghalia-husain-a752a7388',
   },
 ];
 
 const supervisor = {
-  name: '[Supervisor Name]',
-  rank: '[Academic Rank]',
-  email: 'supervisor@uob.edu.bh',
+  name: 'Dr. Jafla Hassan Khalifa Al-Ammari',
+  rank: 'Assistant Professor',
+  email: 'jalammari@uob.edu.bh',
 };
 
 const Team = () => {
@@ -65,7 +62,6 @@ const Team = () => {
                     <th>Major</th>
                     <th>Email</th>
                     <th>LinkedIn</th>
-                    <th>GitHub</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -74,13 +70,17 @@ const Team = () => {
                       <td className="font-medium">{student.name}</td>
                       <td>{student.major}</td>
                       <td>
-                        <a
-                          href={`mailto:${student.email}`}
-                          className="inline-flex items-center gap-1 text-primary hover:underline"
-                        >
-                          <Mail size={14} />
-                          {student.email}
-                        </a>
+                        {student.email ? (
+                          <a
+                            href={`mailto:${student.email}`}
+                            className="inline-flex items-center gap-1 text-primary hover:underline"
+                          >
+                            <Mail size={14} />
+                            {student.email}
+                          </a>
+                        ) : (
+                          <span className="text-muted-foreground">N/A</span>
+                        )}
                       </td>
                       <td>
                         <a
@@ -90,16 +90,6 @@ const Team = () => {
                           className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-mint-light hover:bg-mint transition-colors"
                         >
                           <Linkedin size={16} className="text-primary" />
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href={student.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-mint-light hover:bg-mint transition-colors"
-                        >
-                          <Github size={16} className="text-primary" />
                         </a>
                       </td>
                     </tr>

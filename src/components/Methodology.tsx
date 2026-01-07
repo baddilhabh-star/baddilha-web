@@ -1,4 +1,5 @@
-import { Workflow, CheckCircle2, ImageIcon } from 'lucide-react';
+import { Workflow, CheckCircle2 } from 'lucide-react';
+import architectureDiagram from '@/assets/architecture-diagram.png';
 
 const methodologyPoints = [
   {
@@ -34,15 +35,17 @@ const Methodology = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-          {/* Architecture Diagram Placeholder */}
+          {/* Architecture Diagram */}
           <div className="card-base">
-            <div className="aspect-[4/3] bg-mint-light/50 rounded-xl flex flex-col items-center justify-center border-2 border-dashed border-mint">
-              <ImageIcon className="w-16 h-16 text-mint mb-4" />
-              <p className="text-muted-foreground font-medium">System Architecture Diagram</p>
-              <p className="text-sm text-muted-foreground mt-2">[Upload architecture diagram here]</p>
+            <div className="rounded-xl overflow-hidden bg-background">
+              <img
+                src={architectureDiagram}
+                alt="System Architecture Diagram of the Baddilha platform"
+                className="w-full h-auto object-contain"
+              />
             </div>
             <p className="text-sm text-muted-foreground text-center mt-4 italic">
-              Figure 1: High-level system architecture showing Flutter frontend, Firebase services, and user interaction flow
+              System Architecture Diagram of the Baddilha platform.
             </p>
           </div>
 

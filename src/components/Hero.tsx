@@ -1,6 +1,6 @@
-import { ArrowDown, Download, Smartphone } from 'lucide-react';
+import { ArrowDown, Smartphone } from 'lucide-react';
 import uobLogo from '@/assets/uob-logo.png';
-import baddilhaLogo from '@/assets/baddilha-logo.jpeg';
+import appMockup from '@/assets/app-mockup.png';
 
 const Hero = () => {
   return (
@@ -36,20 +36,11 @@ const Hero = () => {
               A sustainable platform for swapping, donating, and affordable shopping of children's items.
             </p>
 
-            {/* CTA Buttons */}
+            {/* CTA Button */}
             <div className="flex flex-wrap gap-4">
               <a href="#demo" className="btn-primary gap-2">
                 <Smartphone size={20} />
                 View Demo
-              </a>
-              <a
-                href="#"
-                className="btn-secondary gap-2"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Download size={20} />
-                Download APK
               </a>
             </div>
           </div>
@@ -59,11 +50,11 @@ const Hero = () => {
             <div className="relative">
               {/* Phone Frame */}
               <div className="w-64 md:w-72 h-[500px] md:h-[560px] bg-foreground rounded-[3rem] p-3 shadow-large">
-                <div className="w-full h-full bg-mint-light rounded-[2.5rem] flex items-center justify-center overflow-hidden">
+                <div className="w-full h-full bg-background rounded-[2.5rem] flex items-center justify-center overflow-hidden">
                   <img
-                    src={baddilhaLogo}
+                    src={appMockup}
                     alt="Baddilha App"
-                    className="w-48 h-48 object-contain"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 {/* Notch */}
