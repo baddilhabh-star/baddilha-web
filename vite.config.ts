@@ -9,11 +9,15 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
-  base: mode === "development" ? "/" : "/baddilha-web/",
+  plugins: [
+    react(),
+    ...(mode === "development" ? [componentTagger()] : []),
+  ],
+  base: "/baddilha-web/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
 }));
+
