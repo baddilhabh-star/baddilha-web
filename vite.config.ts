@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
     react(),
     ...(mode === "development" ? [componentTagger()] : []),
   ],
-  base: "/baddilha-web/",
+  base: mode === "development" ? "/" : "/baddilha-web/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
