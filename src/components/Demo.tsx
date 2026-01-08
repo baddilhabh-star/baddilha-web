@@ -19,8 +19,7 @@ const Demo = () => {
           <div className="card-base p-6 md:p-8">
             <div className="aspect-video bg-foreground rounded-2xl overflow-hidden shadow-xl">
             <video
-  src={`${import.meta.env.BASE_URL}videos/demo-video-v2.mp4`}
-
+  src="/baddilha-web/videos/demo-video-v2.mp4"
   controls
   className="w-full h-full object-cover"
 >
