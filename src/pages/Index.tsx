@@ -14,15 +14,40 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <Hero />
-      <Abstract />
-      <Objectives />
-      <Methodology />
-      <Technologies />
-      <Results />
-      <Demo />
-      <Conclusion />
-      <Team />
+
+      <section id="abstract">
+        <Hero />
+        <Abstract />
+      </section>
+
+      <section id="objectives">
+        <Objectives />
+      </section>
+
+      <section id="methodology">
+        <Methodology />
+      </section>
+
+      <section id="technologies">
+        <Technologies />
+      </section>
+
+      <section id="results">
+        <Results />
+      </section>
+
+      <section id="demo">
+        <Demo />
+      </section>
+
+      <section id="conclusion">
+        <Conclusion />
+      </section>
+
+      <section id="team">
+        <Team />
+      </section>
+
       <Footer />
     </div>
   );
