@@ -3,14 +3,14 @@ import { Menu, X } from 'lucide-react';
 import baddilhaLogo from '@/assets/baddilha-logo.jpeg';
 
 const navItems = [
-  { label: 'Abstract', id: 'abstract' },
-  { label: 'Objectives', id: 'objectives' },
-  { label: 'Methodology', id: 'methodology' },
-  { label: 'Technologies', id: 'technologies' },
-  { label: 'Results', id: 'results' },
-  { label: 'Demo', id: 'demo' },
-  { label: 'Conclusion', id: 'conclusion' },
-  { label: 'Team', id: 'team' },
+  { label: 'Abstract', href: '#abstract' },
+  { label: 'Objectives', href: '#objectives' },
+  { label: 'Methodology', href: '#methodology' },
+  { label: 'Technologies', href: '#technologies' },
+  { label: 'Results', href: '#results' },
+  { label: 'Demo', href: '#demo' },
+  { label: 'Conclusion', href: '#conclusion' },
+  { label: 'Team', href: '#team' },
 ];
 
 const Navigation = () => {
@@ -24,13 +24,12 @@ const Navigation = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
 
   return (
     <nav
@@ -43,10 +42,7 @@ const Navigation = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <div
-            onClick={() => scrollToSection('abstract')}
-            className="flex items-center gap-3 cursor-pointer"
-          >
+          <a href="#" className="flex items-center gap-3">
             <img
               src={baddilhaLogo}
               alt="Baddilha Logo"
@@ -55,18 +51,14 @@ const Navigation = () => {
             <span className="font-heading font-bold text-xl gradient-text">
               Baddilha
             </span>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-6">
             {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="nav-link text-sm"
-              >
+              <a key={item.href} href={item.href} className="nav-link text-sm">
                 {item.label}
-              </button>
+              </a>
             ))}
           </div>
 
@@ -85,16 +77,14 @@ const Navigation = () => {
           <div className="lg:hidden bg-background border-t border-border py-4 animate-fade-in">
             <div className="flex flex-col gap-2">
               {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => {
-                    scrollToSection(item.id);
-                    setIsMobileMenuOpen(false);
-                  }}
-                  className="px-4 py-2 text-left text-muted-foreground hover:text-foreground hover:bg-mint-light rounded-lg transition-colors"
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="px-4 py-2 text-muted-foreground hover:text-foreground hover:bg-mint-light rounded-lg transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}
-                </button>
+                </a>
               ))}
             </div>
           </div>
