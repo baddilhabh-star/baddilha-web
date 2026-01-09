@@ -18,13 +18,17 @@ const Demo = () => {
           {/* Video Embed */}
           <div className="card-base p-6 md:p-8">
             <div className="aspect-video bg-foreground rounded-2xl overflow-hidden shadow-xl">
-           <video
+         <video
   controls
   className="w-full h-full object-cover"
 >
-  <source src={`${import.meta.env.BASE_URL}video/demo-video-v2.mp4`} type="video/mp4" />
+  <source
+    src="/baddilha-web/videos/demo-video.mp4"
+    type="video/mp4"
+  />
   Your browser does not support the video tag.
 </video>
+
 
 
 

@@ -38,10 +38,16 @@ const Hero = () => {
 
             {/* CTA Button */}
             <div className="flex flex-wrap gap-4">
-              <a href="#demo" className="btn-primary gap-2">
-                <Smartphone size={20} />
-                View Demo
-              </a>
+              <a
+  href="https://baddilhabh-star.github.io/baddilha-web/videos/demo-video.mp4"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-primary gap-2"
+>
+  <Smartphone size={20} />
+  View Demo
+</a>
+
             </div>
           </div>
 
